@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/Background.jpg">
     <HelloWorld msg="Bienvenido a TDP"/>
   </div>
 </template>
@@ -16,3 +15,4 @@ export default {
   }
 }
 </script>
+

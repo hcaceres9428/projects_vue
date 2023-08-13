@@ -1,11 +1,30 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      Bienvenidos a mi primer projecto
-    </p>
-    
-  </div>
+
+  <fieldset>
+    <legend> HC Programer </legend>
+    <header>
+
+      <img src="../assets/Log-HC.png" alt="Logo_Developer">
+
+    </header>
+    <div class="hello">
+      
+      <h1>{{ msg }}</h1>
+      <div class="contenido">
+        
+        <section>
+            <article>
+                <router-link to="/Clientes"><img src="../assets/equipo-de-usuario.png" alt="Price">
+                <br>Clientes</router-link>
+            </article>
+            
+            
+        </section>
+
+      </div>
+      <footer><h1>C3</h1></footer>
+    </div>
+  </fieldset>
 </template>
 
 <script>
@@ -22,15 +41,24 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
 a {
-  color: #42b983;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  text-decoration: none;
+  color: #5442b9;
+}
+.contenido{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+   grid-auto-rows: 1fr;
+}
+legend{
+  text-align: left;
+}
+header img{
+    height: 45px;
+    width: 100px; 
+    padding-right: 1230px;
 }
 </style>
+

@@ -17,6 +17,10 @@
                 <router-link to="/Clientes"><img src="../assets/equipo-de-usuario.png" alt="Price">
                 <br>Clientes</router-link>
             </article>
+            <article>
+                <router-link to="/pedidos"><img src="../assets/caja.png" alt="Price">
+                <br>Pedidos</router-link>
+            </article>
             
             
         </section>
@@ -48,9 +52,10 @@ a {
   color: #5442b9;
 }
 .contenido{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-   grid-auto-rows: 1fr;
+  display: grid;
+    display: block;
+    text-align: center;
+    grid-template-columns: 1fr 1fr ;
 }
 legend{
   text-align: left;
@@ -59,6 +64,13 @@ header img{
     height: 45px;
     width: 100px; 
     padding-right: 1230px;
+}
+
+article{
+    border-style: solid;
+    border-color: white;
+    display: inline-block;
+    margin-left: 100px;
 }
 </style>
 

@@ -52,7 +52,7 @@ export default {
     guardar() {
       
       axios
-        .post("http://localhost:8082/api/clientes", {
+        .post("https://tejido-dp-production.up.railway.app/api/clientes", {
             codigo: this.codigo,
             nombre: this.nombre,
             telefono: this.telefono,
@@ -76,7 +76,7 @@ export default {
     consultar() {
       
       axios
-        .get('http://localhost:8082/api/clientes/'+this.codigo)
+        .get('https://tejido-dp-production.up.railway.app/api/clientes/'+this.codigo)
         .then((response) => {
           // Actualizar los campos del formulario con los datos del cliente consultado
           this.nombre = response.data.nombre;
@@ -94,7 +94,7 @@ export default {
     actualizar() {
       
       axios
-        .put("http://localhost:8082/api/clientes/actualizar/"+this.codigo, {
+        .put("https://tejido-dp-production.up.railway.app/api/clientes/actualizar/"+this.codigo, {
           codigo:this.codigo,
           nombre: this.nombre,
           telefono: this.telefono,
@@ -111,7 +111,7 @@ export default {
     eliminar() {
      
       axios
-        .delete("http://localhost:8082/api/clientes/"+this.codigo)
+        .delete("https://tejido-dp-production.up.railway.app/api/clientes/"+this.codigo)
         .then(() => {
           console.log("Cliente eliminado con éxito");
           // Limpiar los campos del formulario después de eliminar

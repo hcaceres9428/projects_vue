@@ -58,7 +58,7 @@ export default {
     guardar() {
     
       axios
-        .post("http://localhost:8082/api/pedidos", {
+        .post("https://tejido-dp-production.up.railway.app/api/pedidos", {
             codigo: this.codigo,
             nombre: this.nombre,
             detalles: this.detalles,
@@ -84,7 +84,7 @@ export default {
     consultar() {
       
       axios
-        .get('http://localhost:8082/api/pedidos/'+this.codigo)
+        .get('https://tejido-dp-production.up.railway.app/api/pedidos/'+this.codigo)
         .then((response) => {
           // Actualizar los campos del formulario con los datos del pedido consultado
           this.codigo = response.data.codigo;
@@ -103,7 +103,7 @@ export default {
     actualizar() {
       
       axios
-        .put("http://localhost:8082/api/pedidos/actualizar/"+this.codigo, {
+        .put("https://tejido-dp-production.up.railway.app/api/pedidos/actualizar/"+this.codigo, {
             codigo: this.codigo,
             nombre: this.nombre,
             detalles: this.detalles,
@@ -121,7 +121,7 @@ export default {
     eliminar() {
     
       axios
-        .delete("http://localhost:8082/api/pedidos/"+this.codigo)
+        .delete("https://tejido-dp-production.up.railway.app/api/pedidos/"+this.codigo)
         .then(() => {
           console.log("Pedido eliminado con éxito");
           // Limpiar los campos del formulario después de eliminar

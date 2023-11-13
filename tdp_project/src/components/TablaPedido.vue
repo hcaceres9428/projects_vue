@@ -44,7 +44,7 @@ export default {
   methods: {
     obtenerPedidos() {
       // Método para obtener la lista de todos los pedidos
-      axios.get("http://localhost:8082/api/pedidos/listar")
+      axios.get("https://tejido-dp-production.up.railway.app/api/pedidos/listar")
       .then((response) => {
         this.pedidos = response.data;
       })

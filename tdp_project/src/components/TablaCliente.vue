@@ -42,7 +42,7 @@ export default {
   methods: {
     obtenerClientes() {
       // Método para obtener la lista de todos los clientes
-      axios.get("http://localhost:8082/api/clientes/listar")
+      axios.get("https://tejido-dp-production.up.railway.app/api/clientes/listar")
       .then((response) => {
         this.clientes = response.data;
       })

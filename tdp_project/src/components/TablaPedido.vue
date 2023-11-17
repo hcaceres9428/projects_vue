@@ -5,10 +5,14 @@
             <thead>
                 <tr>
                     <th>Código</th>
-                    <th>Nombre</th>
+                    <th>Cliente</th>
+                    <th>Telefono</th>
+                    <th>Producto</th>
                     <th>Detalles</th>
                     <th>Fecha Pedido</th>
+                    <th>Fecha Prospecto</th>
                     <th>Fecha Entrega</th>
+                    <th>Valor Prospecto</th>
                     <th>Valor</th>
                     
                 </tr>
@@ -17,10 +21,14 @@
               
                     <tr v-for="pedido in pedidos" :key="pedido.codigo">
                     <td>{{ pedido.codigo }}</td>
-                    <td>{{ pedido.nombre }}</td>
+                    <td>{{ pedido.cliente }}</td>
+                    <td>{{ pedido.telefono }}</td>
+                    <td>{{ pedido.producto }}</td>
                     <td>{{ pedido.detalles }}</td>
                     <td>{{ pedido.fPed }}</td>
+                    <td>{{ pedido.fAprox }}</td>
                     <td>{{ pedido.fEnv }}</td>
+                    <td>{{ pedido.valorAprox }}</td>
                     <td>{{ pedido.valor }}</td>
                 </tr>
                    
@@ -44,7 +52,7 @@ export default {
   methods: {
     obtenerPedidos() {
       // Método para obtener la lista de todos los pedidos
-      axios.get("https://tejido-dp-production.up.railway.app/api/pedidos/listar")
+      axios.get("https://localhost:8082/api/pedidos/listar")
       .then((response) => {
         this.pedidos = response.data;
       })

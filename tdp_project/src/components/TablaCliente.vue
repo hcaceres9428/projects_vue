@@ -8,7 +8,7 @@
                     <th>Nombre</th>
                     <th>Telefono</th>
                     <th>Dirección</th>
-                    <th>Correo</th>
+                    <th>Ciudad</th>
                     
                 </tr>
             </thead>
@@ -19,7 +19,7 @@
                     <td>{{ cliente.nombre }}</td>
                     <td>{{ cliente.telefono }}</td>
                     <td>{{ cliente.direccion }}</td>
-                    <td>{{ cliente.correo }}</td>
+                    <td>{{ cliente.ciudad }}</td>
                 </tr>
                    
                 <router-view />
@@ -42,7 +42,7 @@ export default {
   methods: {
     obtenerClientes() {
       // Método para obtener la lista de todos los clientes
-      axios.get("https://tejido-dp-production.up.railway.app/api/clientes/listar")
+      axios.get("http://localhost:8082/api/clientes/listar")
       .then((response) => {
         this.clientes = response.data;
       })

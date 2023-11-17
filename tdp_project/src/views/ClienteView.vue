@@ -40,7 +40,7 @@ body {
    /* max-width: 400px;*/
     margin:1rem;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #fff3f3;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }

@@ -49,7 +49,7 @@ a {
   font-family: Arial, Helvetica, sans-serif;
   font-size: x-large;
   text-decoration: none;
-  color: #5442b9;
+  color: #ff66c4;
 }
 .contenido{
   display: grid;
@@ -68,9 +68,8 @@ header img{
 
 article{
     border-style: solid;
-    border-color: white;
+    border-color: #fff3f3;
     display: inline-block;
     margin-left: 100px;
 }
 </style>
-

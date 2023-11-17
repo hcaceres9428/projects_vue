@@ -19,8 +19,8 @@
           <input type="text" id="direccion" name="direccion" required v-model="direccion" />
         </div>
         <div class="form-group">
-          <label for="">Correo:</label>
-          <input type="text" id="correo" name="correo" required v-model="correo"/>
+          <label for="">Ciudad:</label>
+          <input type="text" id="ciudad" name="ciudad" required v-model="ciudad"/>
         </div>
   
         <button type="submit" id="guardar" name="guardar">Guardar</button><br />
@@ -43,7 +43,7 @@ export default {
       nombre: "",
       telefono: null,
       direccion: "",
-      correo: "",
+      ciudad: "",
     };
 
   },
@@ -52,12 +52,12 @@ export default {
     guardar() {
       
       axios
-        .post("https://tejido-dp-production.up.railway.app/api/clientes", {
+        .post("http://localhost:8082/api/clientes", {
             codigo: this.codigo,
             nombre: this.nombre,
             telefono: this.telefono,
             direccion: this.direccion,
-            correo: this.correo,
+            ciudad: this.ciudad,
         })
         .then((response) => {
           console.log("Cliente registrado con éxito:", response.data);
@@ -66,7 +66,7 @@ export default {
           this.nombre = '';
           this.telefono = '';
           this.direccion = '';
-          this.correo = '';
+          this.ciudad = '';
         })
         .catch((error) => {
           console.error("Error al registrar cliente:", error);
@@ -76,14 +76,14 @@ export default {
     consultar() {
       
       axios
-        .get('https://tejido-dp-production.up.railway.app/api/clientes/'+this.codigo)
+        .get('http://localhost:8082/api/clientes/'+this.codigo)
         .then((response) => {
           // Actualizar los campos del formulario con los datos del cliente consultado
           this.nombre = response.data.nombre;
           this.apellido = response.data.apellido;
           this.telefono = response.data.telefono;
           this.direccion = response.data.direccion;
-          this.correo = response.data.correo;
+          this.ciudad = response.data.ciudad;
         })
         .catch((error) => {
           console.error("Error al consultar cliente:", error);
@@ -94,12 +94,12 @@ export default {
     actualizar() {
       
       axios
-        .put("https://tejido-dp-production.up.railway.app/api/clientes/actualizar/"+this.codigo, {
+        .put("http://localhost:8082/api/clientes/actualizar/"+this.codigo, {
           codigo:this.codigo,
           nombre: this.nombre,
           telefono: this.telefono,
           direccion: this.direccion,
-          correo: this.correo,
+          ciudad: this.ciudad,
         })
         .then((response) => {
           console.log("Cliente actualizado con éxito:", response.data);
@@ -111,7 +111,7 @@ export default {
     eliminar() {
      
       axios
-        .delete("https://tejido-dp-production.up.railway.app/api/clientes/"+this.codigo)
+        .delete("http://localhost:8082/api/clientes/"+this.codigo)
         .then(() => {
           console.log("Cliente eliminado con éxito");
           // Limpiar los campos del formulario después de eliminar
@@ -119,12 +119,13 @@ export default {
           this.nombre = "";
           this.telefono = '';
           this.direccion = '';
-          this.correo = '';
+          this.ciudad = '';
         })
         .catch((error) => {
           console.error("Error al eliminar cliente:", error);
         });
     },
   },
+  
 };
 </script>

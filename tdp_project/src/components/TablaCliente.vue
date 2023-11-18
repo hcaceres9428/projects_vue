@@ -6,7 +6,7 @@
                 <tr>
                     <th>Código</th>
                     <th>Nombre</th>
-                    <th>Telefono</th>
+                    <th>Teléfono</th>
                     <th>Dirección</th>
                     <th>Ciudad</th>
                     

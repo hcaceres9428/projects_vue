@@ -11,11 +11,11 @@
           <input type="text" id="nombre" name="nombre" required v-model="nombre"/>
         </div>
         <div class="form-group">
-          <label for="telefono">telefono:</label>
+          <label for="telefono">Teléfono:</label>
           <input type="number" id="telefono" name="telefono" required v-model="telefono"/>
         </div>
         <div class="form-group">
-          <label for="">direccion:</label>
+          <label for="">Dirección:</label>
           <input type="text" id="direccion" name="direccion" required v-model="direccion" />
         </div>
         <div class="form-group">

@@ -11,7 +11,7 @@
         <input type="text" id="cliente" name="cliente" required v-model="cliente"/>
       </div>
       <div class="form-group">
-          <label for="telefono">telefono:</label>
+          <label for="telefono">Teléfono:</label>
           <input type="number" id="telefono" name="telefono" required v-model="telefono"/>
         </div>
       <div class="form-group">
@@ -78,7 +78,7 @@ export default {
     guardar() {
     
       axios
-        .post("https://localhost:8082/api/pedidos", {
+        .post("http://localhost:8082/api/pedidos", {
             codigo: this.codigo,
             cliente: this.cliente,
             telefono: this.telefono,
@@ -112,7 +112,7 @@ export default {
     consultar() {
       
       axios
-        .get('https://localhost:8082/api/pedidos/'+this.codigo)
+        .get('http://localhost:8082/api/pedidos/'+this.codigo)
         .then((response) => {
           // Actualizar los campos del formulario con los datos del pedido consultado
           this.codigo = response.data.codigo;
@@ -135,7 +135,7 @@ export default {
     actualizar() {
       
       axios
-        .put("https://localhost:8082/api/pedidos/actualizar/"+this.codigo, {
+        .put("http://localhost:8082/api/pedidos/actualizar/"+this.codigo, {
             codigo: this.codigo,
             cliente: this.cliente,
             telefono:this.telefono,
@@ -157,7 +157,7 @@ export default {
     eliminar() {
     
       axios
-        .delete("https://localhost:8082/api/pedidos/"+this.codigo)
+        .delete("http://localhost:8082/api/pedidos/"+this.codigo)
         .then(() => {
           console.log("Pedido eliminado con éxito");
           // Limpiar los campos del formulario después de eliminar

@@ -6,7 +6,7 @@
                 <tr>
                     <th>Código</th>
                     <th>Cliente</th>
-                    <th>Telefono</th>
+                    <th>Teléfono</th>
                     <th>Producto</th>
                     <th>Detalles</th>
                     <th>Fecha Pedido</th>
@@ -52,7 +52,7 @@ export default {
   methods: {
     obtenerPedidos() {
       // Método para obtener la lista de todos los pedidos
-      axios.get("https://localhost:8082/api/pedidos/listar")
+      axios.get("http://localhost:8082/api/pedidos/listar")
       .then((response) => {
         this.pedidos = response.data;
       })

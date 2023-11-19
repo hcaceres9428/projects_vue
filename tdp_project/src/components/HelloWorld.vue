@@ -21,6 +21,10 @@
                 <router-link to="/pedidos"><img src="../assets/caja.png" alt="Price">
                 <br>Pedidos</router-link>
             </article>
+            <article>
+                <router-link to=""><img src="../assets/calculadora.png" alt="Price">
+                <br>Calculadora</router-link>
+            </article>
             
             
         </section>

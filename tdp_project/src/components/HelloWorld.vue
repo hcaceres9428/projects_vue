@@ -22,7 +22,7 @@
                 <br>Pedidos</router-link>
             </article>
             <article>
-                <router-link to=""><img src="../assets/calculadora.png" alt="Price">
+                <router-link to="/Calcular"><img src="../assets/calculadora.png" alt="Price">
                 <br>Calculadora</router-link>
             </article>
             

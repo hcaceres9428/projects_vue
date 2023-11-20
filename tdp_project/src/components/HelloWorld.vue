@@ -1,12 +1,5 @@
 <template>
-
-  <fieldset>
-    <legend> HC Programer </legend>
-    <header>
-
-      <img src="../assets/Log-HC.png" alt="Logo_Developer">
-
-    </header>
+    
     <div class="hello">
       
       <h1>{{ msg }}</h1>
@@ -32,7 +25,7 @@
       </div>
       <footer><h1>C3</h1></footer>
     </div>
-  </fieldset>
+  
 </template>
 
 <script>
@@ -60,20 +53,18 @@ a {
     display: block;
     text-align: center;
     grid-template-columns: 1fr 1fr ;
+    width: 70%; /* Ajusta el ancho del fondo Calc_1 */
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 20px; /* Ajusta el relleno según sea necesario */
 }
-legend{
-  text-align: left;
+.contenido img{
+  height: 150px;
+  width: 150px;
 }
-header img{
-    height: 45px;
-    width: 100px; 
-    padding-right: 1230px;
-}
-
 article{
     border-style: solid;
     border-color: #fff3f3;
     display: inline-block;
-    margin-left: 100px;
+    margin-left: 20px;
 }
 </style>

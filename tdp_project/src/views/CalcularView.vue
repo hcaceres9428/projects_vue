@@ -2,9 +2,7 @@
 import FormularioCalcular from '@/components/FormularioCalcular.vue';
 <template>
     <div class="calcular">
-       
        <FormularioCalcular/>
-        
     </div>
 </template>
 <script>
@@ -19,19 +17,26 @@ name: 'CalcularView',
 }
 </script>
 <style >
+.container{
+    background-color: #FFF3F3;
+    padding-top: 2px;
+}
 .Calc_1 {
     font-size: larger;
     display: grid;
-    grid-template-columns: 2fr 4fr;
+    grid-template-columns: 2fr 3fr;
     border-style: solid;
     border-radius: 12px;
     background-color: #4DF4FF;
     -webkit-text-fill-color: black;
-    width: 70%; /* Ajusta el ancho del fondo Calc_1 */
+    width: 50%; /* Ajusta el ancho del fondo Calc_1 */
     margin: 0 auto; /* Centra horizontalmente */
     padding: 20px; /* Ajusta el relleno según sea necesario */
 }
-
+section{
+    border-radius: 12px;
+    background-color: #FFF3F3;
+}
 .datecal{
     text-align: center;
     padding: 3%;
@@ -39,7 +44,7 @@ name: 'CalcularView',
 input{
     border-radius: 6px;
     width: 50%;
-    height: 40px;
+    height: 20px;
 }
 input[type=submit] {
     background-color: #4DF4FF;
@@ -60,8 +65,5 @@ input[type=submit] {
     width: 50%;
     height: 40px;
     font-size: large;
-}
-.botons{
-    text-align: right;
 }
 </style>

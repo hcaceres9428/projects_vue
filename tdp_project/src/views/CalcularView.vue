@@ -41,10 +41,17 @@ section{
     text-align: center;
     padding: 3%;
 }
+.tiempo input{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    width: 10%;
+    height: 30px;
+}
 input{
+    font-size: large;
     border-radius: 6px;
     width: 50%;
-    height: 20px;
+    height: 30px;
 }
 input[type=submit] {
     background-color: #4DF4FF;

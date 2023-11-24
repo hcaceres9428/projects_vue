@@ -15,6 +15,7 @@
         <input type="number"  v-model="costolanaC"><br><br>
         <label for="PesolanaU">Digite peso de lana utilizada: </label><br>
         <input type="number"  v-model="pesolanaU"><br><br>
+        
         <label for="accesorios">Accesorios</label><br>
         <div v-for="(accesorio, index) in accesorios" :key="index">
           <input type="number"  v-model="accesorios[index]">
@@ -27,11 +28,12 @@
           <button @click="agregarAccesorio">Agregar</button>
           <button @click="mostrarSubpantalla = false">Cancelar</button>
         </div>
-        <label for="comision">Digite comisión: </label><br>
+        
+        <br><br><label for="comision">Digite comisión: </label><br>
         <input type="number"  v-model="comision"><br>
       </aside>
       <section>
-        <label for="res">Resultado: {{ resultado }}</label>
+        <label for="res"> <br> Resultado: <br><br> {{ resultado }}</label>
       </section>
     </div>
     <div class="botons">

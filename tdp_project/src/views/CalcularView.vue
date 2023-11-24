@@ -44,10 +44,16 @@ section{
 .tiempo input{
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
-    width: 10%;
+    width: 20%;
     height: 30px;
 }
 input{
+    font-size: large;
+    border-radius: 6px;
+    width: 50%;
+    height: 30px;
+}
+button{
     font-size: large;
     border-radius: 6px;
     width: 50%;
